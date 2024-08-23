@@ -1,0 +1,448 @@
+1. CSS accent-color property - 
+Syntax : accent-color: auto|color|initial|inherit;
+Example : 
+<html>
+<head>
+<style>
+input[type=checkbox] {
+  accent-color: red;
+}
+input[type=radio] {
+  accent-color: green;
+}
+input[type=range] {
+  accent-color: rgb(0, 0, 255);
+}
+progress {
+  accent-color: hsl(39, 100%, 50%);
+}
+</style>
+</head>
+<body>
+<h1>The accent-color Property</h1>
+<h3>Accent color for checkboxes:</h3>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked>
+<label for="vehicle1"> I have a bike</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car" checked>
+<label for="vehicle2"> I have a car</label><br><br>
+<h3>Accent color for radiobuttons:</h3>
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS" checked>
+<label for="css">CSS</label><br>
+<h3>Accent color for a range field:</h3>
+<label for="vol">Volume:</label>
+<input type="range" id="vol" name="vol" min="0" max="50">
+<h3>Accent color for a progress element:</h3>
+<label for="file">Downloading progress:</label>
+<progress id="file" value="72" max="100"> 72% </progress>
+</body>
+</html>
+
+2. CSS align-content Property - 
+Syntax : align-content: stretch|center|flex-start|flex-end|space-between|space-around|space-evenly|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+#main {
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+#main div {
+  width: 70px;
+  height: 70px;
+}
+</style>
+</head>
+<body>
+<h1>The align-content Property</h1>
+<div id="main">
+  <div style="background-color:coral;"></div>
+  <div style="background-color:lightblue;"></div>
+  <div style="background-color:pink;"></div>
+</div>
+</body>
+</html>
+
+3. CSS align-items Property - 
+Syntax : align-items: normal|stretch|positional alignment|flex-start|flex-end|baseline|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+#main {
+  width: 220px;
+  height: 300px;
+  border: 1px solid black; 
+  display: flex;
+  align-items: center;
+}
+#main div {
+  flex: 1;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+</style>
+</head>
+<body>
+<h2>align-items: center</h2>
+<div id="main">
+  <div style="background-color:coral;min-height:30px;">RED</div>
+  <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+  <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+</div>
+</body>
+</html>
+
+4. CSS align-self Property - 
+Syntax : align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit;
+Example : 
+<html>
+<head>
+<style>
+body {
+  background-color:#E7E9EB;
+}
+#main {
+  background-color:#FFFFFF;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+#main div {
+  flex: 1;
+}
+#myBlueDiv {
+  align-self: flex-start;
+}
+</style>
+</head>
+<body>
+<h1>The align-self Property</h1>
+<div id="main">
+  <div style="background-color:coral;">This one is content.</div>
+  <div id="myBlueDiv" style="background-color:lightblue;">This one another element</div>  
+  <div style="background-color:lightgreen;">This <br>is<br>called<br>break<br>lines<br>div.</div>
+</div>
+</body>
+</html>
+
+5. CSS all Property - 
+Syntax : all: initial|inherit|unset;
+Example : 
+<html>
+<head>
+<style> 
+html {
+  font-size: small;
+  color: blue;
+}
+#ex1 {
+  background-color: yellow;
+  color: red;
+}
+#ex2 {
+  background-color: yellow;
+  color: red;
+  all: inherit;
+}
+#ex3 {
+  background-color: yellow;
+  color: red;
+  all: initial;
+}
+#ex4 {
+  background-color: yellow;
+  color: red;
+  all: unset;
+}
+</style>
+</head>
+<body>
+<p>No all property:</p>
+<div id="ex1">This is ex 1</div>
+<p>all: inherit:</p>
+<div id="ex2">This is ex 2</div>
+<p>all: initial:</p>
+<div id="ex3">This is ex 3.</div>
+<p>all: unset:</p>
+<div id="ex4">This is ex 4.</div>
+</body>
+</html>
+
+6. CSS animation Property -
+Syntax : animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+Example : 
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 7s infinite;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+</style>
+</head>
+<body>
+<h1>The animation Property</h1>
+<p>Move an element from 0px to 200px left. The animation lasts for 7 seconds. It then starts over again, and go on forever (infinite). </p>
+<div></div>
+</body>
+</html>
+
+7. CSS animation-delay Property - 
+Syntax : animation-delay: time|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+  animation-delay: 2s;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+</style>
+</head>
+<body>
+<h1>The animation-delay Property</h1>
+<p>Start the animation after 3 seconds:</p>
+<div></div>
+</body>
+</html>
+
+8. CSS animation-direction Property - 
+Syntax : animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: myfirst 5s 2;
+  animation-direction: alternate;
+}
+@keyframes myfirst {
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: green; left: 0px; top: 200px;}
+  100% {background: red; left: 0px; top: 0px;}
+}
+</style>
+</head>
+<body>
+<h1>animation-direction: alternate</h1>
+<p>Play the animation forwards, then after backwards:</p>
+<div></div>
+</body>
+</html>
+
+9. CSS animation-duration Property - 
+Syntax : animation-duration: time|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove infinite;
+  animation-duration: 2s;
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+</style>
+</head>
+<body>
+<h1>The animation-duration Property</h1>
+<p>Specify that the animation should complete one cycle in 2 seconds:</p>
+<div></div>
+<p><strong>Note:</strong> Always specify the animation-duration property. Otherwise the duration is 0, and the animation will not be played.</p>
+</body>
+</html>
+
+10. CSS animation-fill-mode Property - 
+Syntax : animation-fill-mode: none|forwards|backwards|both|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
+</style>
+</head>
+<body>
+<h1>animation-fill-mode: forwards</h1>
+<p>Let the div element retain the style values from the last keyframe when the animation ends:</p>
+<div></div>
+</body>
+</html>
+
+11. CSS animation-iteration-count Property - 
+Syntax : animation-iteration-count: number|infinite|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s;
+  animation-iteration-count: 4;
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+</style>
+</head>
+<body>
+<h1>The animation-iteration-count Property</h1>
+<p>Play the animation four times:</p>
+<div></div>
+</body>
+</html>
+
+12. CSS animation-name Property - 
+Syntax : animation-name: keyframename|none|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: mymove;
+  animation-duration: 7s;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+</style>
+</head>
+<body>
+<h1>The animation-name Property</h1>
+<p>Specify a name for the @keyframes animation.</p>
+<div></div>
+<p><b>Note:</b> Always specify the animation-duration property. Otherwise the duration is 0, and the animation will not be played.</p>
+</body>
+</html>
+
+13. CSS animation-play-state Property - 
+Syntax : animation-play-state: paused|running|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 8s;
+  animation-play-state: paused;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+</style>
+</head>
+<body>
+<h1>The animation-play-state Property</h1>
+<p>Pause an animation:</p>
+<div></div>
+</body>
+</html>
+
+14. CSS animation-timing-function Property - 
+Syntax : animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 8s infinite;
+  animation-timing-function: linear;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+</style>
+</head>
+<body>
+<h1>The animation-timing-function Property</h1>
+<p>Play an animation with the same speed from beginning to end:</p>
+<div></div>
+</body>
+</html>
+
+15. CSS aspect-ratio Property  - 
+Syntax : aspect-ratio: number/number|initial|inherit; 
+Example : 
+<html>
+<head>
+<style>
+div {
+  background-color: red;
+  width: 100px;
+  aspect-ratio: 4/1;
+}
+</style>
+</head>
+<body>
+<h3>Aspect-ratio property</h3>
+<div>Hello</div>
+<p>Aspect ratio is width/height.</p>
+<p>Aspect-ratio of 4/1 and width set to 100px makes height of red box 1/4 of width in this case.</p>
+</body>
+</html>
+
